@@ -1,0 +1,173 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/split/split.css">
+    <title>Split Bill</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <img src="../uploads/<%- photo %>" alt="" class="website-user">
+            <div class="website-logo">
+                <a href="/dashboard" class="">
+                    <img src="/split/photos/horizontal_on_white_by_logaster (1).png" alt="" class="website-logo-img">
+                </a>
+            </div>
+            <div class="action-nav-bar">
+                <button class="qr-scan-nav">Scan QR</button>
+                <img src="/split/photos/menu.png" onclick="openmenu()" id="open" class="menu-icon">
+            </div>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <ul>
+                    <li><a href="">Edit Profile</a></li>
+                    <li><a href="">Change Password</a></li>
+                    <li><a href="">Help</a></li>
+                    <li><a href="">Log Out</a></li>
+                </ul>
+                <img src="/split/photos/cross.png" class="close" id="close" onclick="closemenu()">
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="balance">
+            <img src="/split/photos/payment-method.png" alt="" class="wallet-balance">
+            <p> = <span><%= wallet %></span></p>
+        </div>
+        <section class="main">
+            
+            <input type="number" class="enter-input" id="input-amount" placeholder="Enter Amount" required>
+            <div class="split-type">
+                <input type="radio" onclick="displayRadioValue(this)" id="automatically" name="split-type"
+                    value="automatically">
+                <label for="automatically">
+                    <h5>Automatically</h5>
+                </label><br>
+                <input type="radio" onclick="displayRadioValue(this)" id="manually" name="split-type" value="Manually">
+                <label for="manually">
+                    <h5>Manually</h5>
+                </label><br>
+            </div>
+            <div class="method display">
+                <div class="method-qr method-arrange">
+                    <a href="/dashboard/splitbill/qr-code">
+                        <img src="/split/photos/qr-code(1).png" alt="">
+                        <p>Scan QR</p>
+                    </a>
+                </div>
+
+                <div class="method-friend method-arrange">
+                    <a href="">
+                        <img src="/split/photos/friendship.png" alt="">
+                        <p>Search Friend</p>
+                    </a>
+                </div>
+
+
+                <div class="method-number method-arrange">
+                    <a onclick="addNum(this)">
+                        <img src="/split/photos/phone-call.png" alt="">
+                        <p >Enter Number</p>
+                    </a>
+                </div>
+            </div>
+            <div class="active-method display">
+                <input type="number" placeholder="Enter Mobile No.">
+                <div class="action-method">
+                    <button type="button" onclick="add(this)" class="action-method-button al">Add to List</button>
+                    <button type="button" class="action-method-button af">Add Friend</button>
+                </div>
+            </div>
+            <div class="friend-list display">
+                <table id="table" class="auto" id="table">
+                    <tr>
+                        
+                        <th>User Name</th>
+                        <th>Number</th>
+                        <th>Amount</th>
+                        <th>Access</th>
+                    </tr>
+                    <tr>
+                        <td class="user-name">atri_tilak</td>
+                        <td>9310099053</td>
+                        <td class="amt"></td>
+                        <td class="friend-list-data"><div class="display result">Received</div><button onclick="req(this)">Request<span  class="display">ed</span></button></td>
+                    </tr>
+                    <tr>
+                        <td class="user-name">guneet_tuli</td>
+                        <td>9931346254</td>
+                        <td class="amt"></td>
+                        <td class="friend-list-data"><div class="display result">Received</div><button onclick="req(this)">Request<span  class="display">ed</span></button></td>
+                    </tr>
+                    <tr>
+                        <td class="user-name">himanshu_singh</td>
+                        <td>9305758830</td>
+                        <td class="amt"></td>
+                        <td class="friend-list-data"><div class="display result">Received</div><button onclick="req(this)">Request<span  class="display">ed</span></button></td>
+                    </tr>
+                    <tr>
+                        <td class="user-name">divyanshi_jod</td>
+                        <td>9486343966</td>
+                        <td class="amt"></td>
+                        <td class="friend-list-data"><div class="display result">Received</div><button onclick="req(this)">Request<span  class="display">ed</span></button></td>
+                    </tr>
+                </table>
+                <div class="success none">
+                    <p id="message" style="color: yellow;font-size: 22px;">Processing, Please Wait</p>
+                </div>
+                <div class="after-pay">
+                    <div class="pay-confirm">
+                        <h5>You Want to Confirm Payment ?</h5>
+                        <button onclick="start(this)">Yes , I confirm !</button>
+                    </div>
+                    <div class="pay-confirm reciept">
+                        <h5>You want copy of bill?</h5>
+                        <button onclick="start(this)">Yes !</button>
+                    </div>
+                </div>
+                <div class="success none">
+                    <img id="success-img" src="/split/verification.png" alt="">
+                </div>
+        </section>
+    </main>
+    <footer>
+        <div class="about">
+            <h2>About Us</h2>
+            <p>@Copyrights GoEasy.com Pvt Ltd
+                Student & Youth Service Platform
+                Team GoEasy.com Standard Service
+                Platform.
+                
+            </p>
+        </div>
+        <div class="Pages">
+            <h2>Pages</h2>
+            <ul>
+                <li> <a href="">Dashboard</a></li>
+                <li> <a href="">Split Bill</a> </li>
+                
+                <li><a href="">Change Password </a></li>
+                <li><a href=""> Help </a></li>
+            </ul>
+        </div>
+        <div class="connect">
+            <h2>Connect</h2>
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-twitter-square"></i></a>
+            <a href=""><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script src="/split/dash.js"></script>
+</body>
+
+</html>

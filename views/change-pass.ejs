@@ -1,0 +1,30 @@
+<%-include('./partials/defaults')-%>
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./change-pass/index.css">
+    <title>Split Bill</title>
+</head>
+
+<body>
+    <%- include('./partials/navbar') -%>
+    <div class="main">
+      <div class="message"><h4><%= mess %></h4></div>
+        <form action="/change-password" method="POST">
+            <h2 class="head">Change Password</h2>
+            
+            <input type="password" name="op" placeholder="Old Password" required>
+            <input type="password" name="np" placeholder="New Password" required>
+            <input type="password" name="cp" placeholder="Confirm Password" required>
+            <button>Submit</button>
+        </form>
+
+
+
+    </div>
+    <%- include('./partials/footer') -%>
+<script src="./change-pass/index.js"></script>
+</body>
+
+</html>

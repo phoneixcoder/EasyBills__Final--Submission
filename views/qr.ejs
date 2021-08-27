@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../Qr-Gen/styles.css">
+    <title>Split Bill</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="../../uploads/<%- photo %>" alt="" class="website-user">
+            <div class="website-logo">
+                <a href="" class="">
+                    <img src="../../QR-Gen/photos/horizontal_on_white_by_logaster (1).png" alt="" class="website-logo-img">
+                </a>
+            </div>
+            <div class="action-nav-bar">
+                <button class="qr-scan-nav">Scan QR</button>
+                <img src="../../QR-Gen/photos/menu.png" onclick="openmenu()" id="open" class="menu-icon">
+            </div>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <ul>
+                    <li><a href="">Edit Profile</a></li>
+                    <li><a href="">Change Password</a></li>
+                    <li><a href="">Help</a></li>
+                    <li><a href="">Log Out</a></li>
+                </ul>
+                <img src="../../QR-Gen/photos/cross.png" class="close" id="close" onclick="closemenu()">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="head">
+
+            <button style="cursor: pointer;" onclick="window.location.href='/dashboard'"> <i class="fas fa-arrow-left"></i>Back</button>
+        </div>
+        
+        <div class="qr-gen">
+            <img src='<%- cod %>' alt="">
+            <button style="cursor: pointer;" onclick="window.location.href='/dashboard'">
+                Pay Now
+            </button>
+        </div>
+        
+
+    </main>
+    
+
+
+
+    <footer>
+        <div class="about">
+            <h2>About Us</h2>
+            <p>@Copyrights GoEasy.com Pvt Ltd
+                Student & Youth Service Platform
+                Team GoEasy.com Standard Service
+                Platform.
+                
+            </p>
+        </div>
+        <div class="Pages">
+            <h2>Pages</h2>
+            <ul>
+                <li> <a href="">Dashboard</a></li>
+                <li> <a href="">Split Bill</a> </li>
+                
+                <li><a href="">Change Password </a></li>
+                <li><a href=""> Help </a></li>
+            </ul>
+        </div>
+        <div class="connect">
+            <h2>Connect</h2>
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-twitter-square"></i></a>
+            <a href=""><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+<script src="../../QR-Gen/index.js"></script>
+</body>
+
+</html>

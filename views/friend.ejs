@@ -1,0 +1,76 @@
+<%-include('./partials/defaults')-%>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="friend.css">
+    <title>Friend List</title>
+</head>
+
+<body>
+    <%-include('./partials/navbar')-%>
+    <main>
+        <div class="search-buttons">
+            <form class="search-bar">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <div class="buttons-add-edit">
+                <button class="add">Add More</button>
+                <button class="edit">Invite Friend</button>
+            </div>
+        </div>
+
+        <div class="friend-list">
+            <table>
+                <tr>
+
+                    <th>User Name</th>
+                    <th>Phone Number</th>
+                    <th>Add to list</th>
+                </tr>
+                <tr>
+                    <td>@atri_tilak</td>
+                    <td>xxxxxxxxxx</td>
+                    <td class="user-remove"><img src="5269554541547546467.svg" alt=""></td>
+                </tr>
+                <tr>
+                    <td>@atri_tilak</td>
+                    <td>xxxxxxxxxx</td>
+                    <td class="user-remove"><img src="5269554541547546467.svg" alt=""></td>
+                </tr>
+                <tr>
+                    <td>@atri_tilak</td>
+                    <td>xxxxxxxxxx</td>
+                    <td class="user-remove"><img src="5269554541547546467.svg" alt=""></td>
+                </tr>
+                <tr>
+                    <td>@atri_tilak</td>
+                    <td>xxxxxxxxxx</td>
+                    <td class="user-remove"><img src="5269554541547546467.svg" alt=""></td>
+                </tr>
+                <tr>
+                    <td>@atri_tilak</td>
+                    <td>xxxxxxxxxx</td>
+                    <td class="user-remove"><img src="5269554541547546467.svg" alt=""></td>
+                </tr>
+                <tr>
+                    <td>@atri_tilak</td>
+                    <td>xxxxxxxxxx</td>
+                    <td class="user-remove"><img src="5269554541547546467.svg" alt=""></td>
+                </tr>
+                <tr>
+                    <td>@atri_tilak</td>
+                    <td>xxxxxxxxxx</td>
+                    <td class="user-remove"><img src="5269554541547546467.svg" alt=""></td>
+                </tr>
+            </table>
+            <img src="2650149-removebg.png" alt="" class="friend-list-img">
+        </div>
+
+    </main>
+    <%- include('partials')-%>
+    <script src="friend.js"></script>
+</body>
+
+</html>

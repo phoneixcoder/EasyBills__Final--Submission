@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="1.css">
+    <title>Add Friend</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="403019_avatar_male_man_person_user_icon.svg" alt="" class="website-user">
+            <div class="website-logo">
+                <a href="" class="">
+                    <img src="horizontal_on_white_by_logaster (1).png" alt="" class="website-logo-img">
+                </a>
+            </div>
+            <div class="action-nav-bar">
+                <button class="qr-scan-nav">Scan QR</button>
+                <img src="menu.png" onclick="openmenu()" id="open" class="menu-icon">
+            </div>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <ul>
+                    <li><a href="">Edit Profile</a></li>
+                    <li><a href="">Change Password</a></li>
+                    <li><a href="">Help</a></li>
+                    <li><a href="">Log Out</a></li>
+                </ul>
+                <img src="cross.png" class="close" id="close" onclick="closemenu()">
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <div class="add-friend-heading-button">
+            <div class="add-friend-heading">
+                <h1>Add <span> Friends </span> </h1>
+                <p>"Splitting Bill is a <span> myth </span><br> but <span>EasyBill </span> it isn't."</p>
+            </div>
+            <div class="buttons-add-edit">
+                <button class="add">Search Friend</button>
+                <button class="Accept-Request">Accept Request</button>
+            </div>
+        </div>
+
+        <div class="search-send-req">
+            <div class="button-req">
+                <form class="search-bar">
+                    <input type="text" placeholder="Enter Email/ Mobile Number" name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+                <button class="send-request">Send Request</button>
+            </div>
+            <img src="Add friends.gif" alt="">
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="about">
+            <h2>About Us</h2>
+            <p>@Copyrights GoEasy.com Pvt Ltd
+                Student & Youth Service Platform
+                Team GoEasy.com Standard Service
+                Platform.
+
+            </p>
+        </div>
+        <div class="Pages">
+            <h2>Pages</h2>
+            <ul>
+                <li> <a href="">Dashboard</a></li>
+                <li> <a href="">Split Bill</a> </li>
+
+                <li><a href="">Change Password </a></li>
+                <li><a href=""> Help </a></li>
+            </ul>
+        </div>
+        <div class="connect">
+            <h2>Connect</h2>
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-twitter-square"></i></a>
+            <a href=""><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+    <canvas class="background"></canvas>
+    <script src="/particles.js-master/src/particles.js"></script>
+    <script src="friend.js"></script>
+</body>
+
+</html>

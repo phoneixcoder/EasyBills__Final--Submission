@@ -1,0 +1,44 @@
+<%-include('./partials/defaults')-%>
+    <title>EasyBills-Edit Profile</title>
+    <link rel="stylesheet" href="../edit-profile/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+    <%-include('./partials/navbar')-%>
+    <div class="main">
+        <div class="edit-nav">
+            <button id="back"><i class="fas fa-arrow-left"></i>Back</button>
+            <button id="edit" onclick="window.location.href='/dashboard'">Save <i class="far fa-edit"></i></button>
+        </div>
+        <div class="profile">
+            <div class="user-img">
+                <img src="../uploads/<%- photo %>" alt="">
+                
+            </div>
+            <div class="user-info">
+                <table>
+                    <tr>
+                        <td class="tb-left">Name</td>
+                        <td><input type="text" placeholder="Guneet Singh"></td>
+                    </tr>
+                    <tr>
+                        <td class="tb-left">Username</td>
+                        <td><input type="text" placeholder="Guneet" name="" id=""></td>
+                    </tr>
+                    <tr>
+                        <td class="tb-left">Mobile Number</td>
+                        <td><input type="text" placeholder="9999999999"></td>
+                    </tr>
+                    <tr>
+                        <td class="tb-left">DOB</td>
+                        <td>02-05-02</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <%-include('./partials/footer')-%>
+    <script src="index.js"></script>
+</body>
+</html>

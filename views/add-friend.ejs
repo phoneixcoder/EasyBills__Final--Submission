@@ -1,0 +1,43 @@
+<%-include('./partials/defaults')-%>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/add-friend/1.css">
+    <title>Add Friend</title>
+</head>
+
+<body>
+    <%-include('./partials/navbar')-%>
+    <main>
+
+        <div class="add-friend-heading-button">
+            <div class="add-friend-heading">
+                <h1>Add <span> Friends </span> </h1>
+                <p>"Splitting Bill is a <span> myth </span><br> but <span>EasyBill </span> it isn't."</p>
+            </div>
+            <div class="buttons-add-edit">
+                <button class="add">Search Friend</button>
+                <button class="Accept-Request">Accept Request</button>
+            </div>
+        </div>
+
+        <div class="search-send-req">
+            <div class="button-req">
+                <div class="message display">Request Send Successfully</div>
+                <form class="search-bar">
+                    <input type="text" placeholder="Enter Email/ Mobile Number" name="search">
+                    <button type="submit" class="display"><i class="fa fa-search"></i></button>
+                </form>
+                <button class="send-request" onclick="show(this)">Send Request</button>
+            </div>
+            <img src="/add-friend/photos/Add friends.gif" alt="">
+        </div>
+
+    </main>
+
+    <%-include('./partials/footer')-%>
+    <script src="/add-friend/friend.js"></script>
+</body>
+
+</html>

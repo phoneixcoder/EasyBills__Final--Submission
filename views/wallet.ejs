@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyBills-Wallet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="EasyWallet.css"> 
+    
+</head>
+<body>
+  <header>
+    <nav>
+      <img src="../uploads/<%- photo %>" alt="" class="website-user">
+        <div class="website-logo">
+            <a href="/dashboard" class="">
+                <img src="/split/photos/horizontal_on_white_by_logaster (1).png" alt="" class="website-logo-img">
+            </a>
+        </div>
+      <div class="action-nav-bar">
+          <button class="qr-scan-nav">Scan QR</button>
+          <img src="./photos/menu.png" onclick="openmenu()" id="open" class="menu-icon">
+      </div>
+      <div class="hamburger-menu" id="hamburger-menu">
+          <ul>
+              <li><a href="/dashBoard/profile">Edit Profile</a></li>
+              <li><a href="/change-password">Change Password</a></li>
+              <li><a href="/contact">Help</a></li>
+              <li><a href="/logout">Log Out</a></li>
+          </ul>
+          <img src="./photos/cross.png" class="close" id="close" onclick="closemenu()">
+      </div>
+  </nav>
+  </header>
+    <section>
+      <div class="div-row">
+        <div class="div-col-1">
+            <h2>
+                EasyBills Wallet
+            </h2>
+            <h4> <img style="margin-right: 20px;" src="./photos/wallet-img.svg" alt="">&#8377;<%= wallet %></h4>
+            <button type="button" >Add Money</button>
+        </div>
+        <div class="div-col-2">
+            <img src="./photos/aboutvec02.png" alt="" class="image">
+        </div>
+    </div>
+    </section>
+    <footer>
+        <div class="about">
+            <h2>About Us</h2>
+            <p>@Copyrights GoEasy.com Pvt Ltd
+                Student & Youth Service Platform
+                Team GoEasy.com Standard Service
+                Platform.
+                
+            </p>
+        </div>
+        <div class="Pages">
+            <h2>Pages</h2>
+            <ul>
+                <li> <a href="">Dashboard</a></li>
+                <li> <a href="">Split Bill</a> </li>
+                
+                <li><a href="">Change Password </a></li>
+                <li><a href=""> Help </a></li>
+            </ul>
+        </div>
+        <div class="connect">
+            <h2>Connect</h2>
+            <a href=""><i class="fab fa-facebook"></i></a>
+            <a href=""><i class="fab fa-twitter-square"></i></a>
+            <a href=""><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer> 
+    <div class="main">
+    </div>
+    <script src="dash.js"></script>
+    <script src="dash2.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 10px 17px;
+}
+
+nav .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .logo img {
+  width: 300px;
+  height: auto;
+}
+
+nav .logo button {
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  z-index: 101;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+  -webkit-transition-delay: 500ms;
+          transition-delay: 500ms;
+}
+
+@media (min-width: 768px) {
+  nav .logo button {
+    display: none;
+  }
+  nav .logo button i {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  nav .logo {
+    width: 100vw;
+  }
+}
+
+nav .menu {
+  width: 450px;
+}
+
+nav .menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .menu ul li {
+  list-style-type: none;
+  margin: 0 8px;
+  margin: 0 6px;
+}
+
+nav .menu ul li i {
+  font-size: 1.2rem;
+  margin-right: 3px;
+}
+
+nav .menu ul li :hover {
+  color: #999999;
+}
+
+nav .menu ul :hover {
+  color: #999999;
+}
+
+@media (max-width: 768px) {
+  nav .menu {
+    width: 100vw;
+    position: absolute;
+    right: 0;
+    left: -100%;
+    bottom: 0;
+    top: 0;
+    background-color: black;
+    opacity: 0.9;
+    color: white;
+    -webkit-transition: 500ms ease-in-out;
+    transition: 500ms ease-in-out;
+  }
+  nav .menu ul {
+    height: 70vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  nav .menu ul li {
+    margin: 15px 0;
+    font-size: 20px;
+  }
+}
+
+.appear {
+  left: 0 !important;
+  z-index: 100;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+}
+
+.rotate {
+  -webkit-transform: rotate(90deg) !important;
+          transform: rotate(90deg) !important;
+  -webkit-transition: 500ms ease-in-out !important;
+  transition: 500ms ease-in-out !important;
+  -webkit-transition-delay: 500ms !important;
+          transition-delay: 500ms !important;
+}
